@@ -12,7 +12,7 @@ users_db = {}
 async def create_user(user: User):
     user_id = str(uuid.uuid4())  # Genera un ID único
     users_db[user_id] = {"name": user.name, "email": user.email}
-    return {"message": "Usuario creado exitosamente", "user_id": user_id, "data": users_db[user_id]}
+    return {"message": "Usuario registrado exitosamente", "user_id": user_id, "data": users_db[user_id]}
 
 # Endpoint GET para obtener un usuario por ID
 @router.get("/users/{user_id}")
